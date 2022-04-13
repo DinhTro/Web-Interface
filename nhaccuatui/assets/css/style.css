@@ -1,0 +1,625 @@
+.box-main {
+    overflow: hidden;
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    background-color: #fff;
+    border-bottom: 1px solid #999;
+}
+
+.header-nav {
+    width: 100%;
+}
+
+
+.header-nav__item {
+    position: relative;
+    margin-right: 20px;
+}
+
+.header-nav__link {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    line-height: 32px;
+}
+
+.header-nav__link:hover {
+    color: var(--primary-color);
+}
+
+.header-more {
+    padding: 5px 0;
+    filter: brightness(0)
+}
+
+.header-more:hover {
+    filter: unset;
+}
+
+.header-nav__img {
+    height: 28px;
+    width: 28px;
+}
+
+.header-nav__img:hover {
+    opacity: 0.8;
+}
+
+.img__new-version {
+    margin-left: -10px;
+}
+
+.header-nav__upload {
+    margin: 0 10px 0 -5px;
+    height: 32px;
+}
+
+.header-logo {
+    display: block;
+    height: 30px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.header-nav__search {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.header-search-input {
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    padding: 5px 0 5px 35px;
+    color: var(--txt-color);
+}
+
+.header-search-icon {
+    font-size: 1.7rem;
+    color: var(--name-singer-color);
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-45%);
+    margin-left: 5px;
+}
+
+.header-nav__list:last-child .header-nav__item:last-child {
+    margin-right: unset;
+}
+
+/* search-history */
+
+.search-history {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 150%;
+    animation: showIn ease-in 0.3s;
+    display: none;
+}
+.dropdown-search:focus ~ .search-history {
+    display: block;
+}
+
+.search-history__heading,
+.search-history__you {
+    background-image: linear-gradient(to right, #e6e6e6, #fff);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ccc;
+    color: var(--txt-color);
+}
+
+.search-history__list {
+    padding: 0 15px
+}
+
+
+.search-history__link {
+    padding: 10px 0;
+}
+
+.search-history__number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 10px
+}
+
+.number {
+    color: var(--name-singer-color);
+}
+
+.number-1 {
+    color: #e74c3c;
+}
+
+.number-2 {
+    color: #1abc9c;
+}
+
+.number-3 {
+    color: #f39c4d;
+}
+
+.number-4 {
+    color: #2980b9;
+}
+
+.number-5 {
+    color: #48647c;
+}
+
+.search-history__name {
+    color: var(--music-color);
+    font-size: 1.5rem;
+}
+
+.search-history__you {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.search-history__you--text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--music-color);
+}
+.search-history__you--icon {
+    font-size: 1.6rem;
+    color: var(--music-color);
+    cursor: pointer;
+}
+
+.search-history__you--icon:hover {
+    opacity: 0.7;
+}
+
+.search-history__near {
+    padding: 15px 10px;
+    font-size: 1.5rem;
+    color: var(--name-singer-color);
+    font-style: italic;
+
+}
+
+
+/* signup - signin */
+
+.btn__sign-up {
+    padding: 7px 16px;
+    color: white;
+    background-image: linear-gradient( 45deg, #2f80ed 0%, #00aeef 100%);
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+.btn__sign-up:hover {
+    filter: brightness(90%);
+}
+
+
+.header-nav__sign-in {
+    color: var(--txt-color);
+    font-size: 1.4rem;
+}
+
+/* slider */
+
+.slider {
+    position: relative;
+}
+
+.slider-list {
+    padding: calc(var(--header-height) + 30px) 0;
+    overflow: hidden;
+}
+
+.slider-item {
+    cursor: pointer;
+}
+
+.slider-img {
+    border-radius: 4px;
+    width: 100%;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    border: none;
+    width: 50px;
+    height: 86px;
+    font-size: 2.4rem;
+    cursor: pointer;
+    background-color: rgb(255 255 255 / 28%);
+    color: rgb(255 255 255 / 57%);
+    display: none !important;
+    animation: showIn linear 0.3s;
+}
+
+.slider-list:hover .slick-arrow {
+    display: block !important;
+}
+
+.slick-prev {
+    left: 15px;
+}
+
+.slick-next {
+    right: 15px;
+}
+
+.slick-prev i, .slick-next i {
+    font-size: 3.5rem !important;
+}
+
+.slick-dots {
+    position: absolute;
+    list-style: none;
+    display: flex !important;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 87%;
+    gap: 0 5px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 6px;
+    height: 6px;
+    border: none;
+    border-radius: 100rem;
+    cursor: pointer;
+    background-color: #c3c3c3
+}
+
+.slick-dots .slick-active button {
+    background-color: var(--primary-color);
+    width: 18px;
+}
+
+
+
+
+
+
+
+
+
+/* main */
+
+.main-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 0.1rem;
+}
+
+.main-title:not(:first-child) {
+    margin-top: 70px;
+}
+
+/* album */
+
+.album-list {
+    padding-bottom: 40px;
+}
+
+.album-item:hover .album-icon{
+    display: block;
+}
+
+.album-link {
+    position: relative;
+    padding-top: 100%;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.3s;
+}
+
+
+.album-link:hover {
+    filter: brightness(60%);
+}
+
+.album-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-size: 5rem;
+    color: white;
+    animation: showIn 0.3s linear;
+}
+
+.album-name {
+    position: absolute;
+    top: calc(100% + 10px);
+    transition: all 0.3s;
+    color: var(--music-color);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.album-name:hover {
+    color: var(--primary-color);
+}
+
+
+/* chart */
+
+.chart__title {
+
+}
+
+.chart-title__icon {
+    position: relative;
+    top: 1px;
+    font-size: 3.5rem;
+    line-height: 0;
+    margin-left: 10px;
+    color: #aaaaaa;
+}
+
+.chart-countries {
+    background-color: #cfcfcf;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.chart-country {
+    color: var(--music-color);
+    padding: 10px 0;
+    width: 94px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+.chart-country:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+
+.chart-country.active:not(:first-child) and .chart-country.active:not(:last-child) {
+    color: #fff;
+    background-color: #e74c3c;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.chart-country.active:first-child {
+    color: #fff;
+    background-color: #e74c3c;
+    border-right: 1px solid #fff;
+}
+.chart-country.active:last-child {
+    color: #fff;
+    background-color: #e74c3c;
+    border-left: 1px solid #fff;
+}
+
+.chart-list {
+    margin-top: 20px;
+}
+
+.chart-item {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid #e7e7e7;
+}   
+
+.chart-item__img {
+    position: relative;
+    height: 100px;
+    margin-right: 10px;
+
+}
+
+.chart-item__rank {
+    font-size: 2rem;
+    padding: 10px 12px;
+    margin-right: 5px;
+    
+}
+
+.chart-item__link {
+    height: 100%;   
+    width: 100%;
+}
+
+.chart__music-name {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--music-color);
+}
+
+.chart__author {
+    font-size: 1.3rem;
+    color: var(--name-singer-color);
+    margin-top: 8px;
+    text-transform: capitalize;
+}
+
+.chart__music-name:hover,
+.chart__author:hover {
+    color: var(--primary-color);
+}
+
+.chart-top1 {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+
+}
+
+
+
+/* footer */
+
+.footer {
+    background-color: #ebebeb;
+    border-top: 2px solid var(--primary-color);
+}
+
+.footer-wrap__heading {
+    border-bottom: 2px solid #afafaf;
+    padding: 40px 0;
+}
+
+.footer-heading {
+    text-transform: uppercase;
+}
+
+.footer__top-item {
+    margin-right: 3px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.footer-headding__icon {
+    position: relative;
+    top: 1px;
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.5);
+    margin-right: 8px;
+}
+
+.footer-headding__link {
+    font-size: 1.3rem;
+    color: var(--name-singer-color);
+}
+
+.footer-headding__link:hover {
+    color: var(--primary-color);
+}
+
+.footer__top-list {
+    flex-wrap: wrap;
+    margin: 10px 0;
+    line-height: 1.9rem;
+}
+
+.footer__top-link {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.footer__list-social--icon {
+    margin: 20px 0;
+    font-size: 2.4rem;
+    margin-right: 20px
+}
+
+.footer__list-app--img {
+    height: 32px;
+}
+
+.footer-wrap__body {
+    padding: 40px 0;
+}
+
+.footer-coparation {
+    margin-right: 50px;
+}
+
+.footer-coparation__img {
+    height: 96px;
+    width: 80px;    
+    object-fit: contain;
+}
+
+.foorter-company__name {
+    color: var(--name-singer-color);
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.footer-company__info {
+    padding: 4px 0;
+}
+
+.footer-company__dot {
+    position: relative;
+    top: 2px;
+    width: 5px;
+    height: 5px;
+    background-color: #aaaaaa;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.footer-company-txt {
+    color: var(--name-singer-color);
+    font-size: 1.4rem;
+} 
+
+.footer-company-txt span {
+    font-weight: 700;
+}
+
+.footer-permission img {
+    width: 120px;
+    height: 98px;
+    object-fit: contain;
+}
+
+
+.footer-bot {
+    background-image: linear-gradient( to right, #2f80ed 0%, #00aeef 100%);
+}
+
+.footer-bot__content {
+    width: 100%;
+    height: var(--header-height);
+}
+
+.footer-bot__icon,
+.footer-text,
+.footer-copyright {
+    color: #fff;
+    font-size: 1.4rem;
+}
+.footer-bot__icon {
+    position: relative;
+    top: 2px;
+    margin-right: 8px;
+    font-size: 1.6rem;
+}
+
